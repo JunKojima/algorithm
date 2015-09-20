@@ -17,9 +17,11 @@ void insertionSort(int A[], int N) {
     v = A[i];
     j = i - 1;
     while (j >= 0 && A[j] > v) {
+      /*以下で一つづつ要素をずらす。*/
       A[j + 1] = A[j];
       j--;
     }
+    /*条件でブレークした際、j--されるため、j+1が挿入位置となる*/
     A[j + 1] = v;
     trace(A,N);
   }
